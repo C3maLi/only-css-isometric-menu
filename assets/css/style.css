@@ -1,0 +1,101 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #000;
+  font-family: 'Roboto';
+  font-size: 1rem;
+  background-image: linear-gradient(10deg, rgba(184, 213, 253, 0.28), rgba(0, 95, 255, 0.1), rgba(184, 212, 254, 0.5));
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  position: relative;
+  transform: rotateX(45deg) rotateZ(45deg);
+}
+nav ul {
+  width: 10rem;
+  list-style: none;
+}
+
+nav ul li {
+  position: relative;
+}
+nav ul li a {
+  background: #000;
+  color: #999;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.07rem;
+  position: relative;
+  display: block;
+  box-shadow: 1em 1em 0 #e1e1e1;
+  z-index: 0;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+nav ul li a:hover {
+  background: #00c595;
+  color: #fff;
+  transform: translate(-0.8em, -0.8em);
+  box-shadow: 1.5em 1.5em 0 #e1e1e1;
+}
+
+nav ul li a .icon {
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+  position: absolute;
+  transition: all 0.3s ease;
+  content: '';
+}
+nav ul li a::before {
+  height: 0.31rem;
+  background: #000;
+  bottom: -0.31rem;
+  left: 0.14rem;
+  width: 100%;
+  transform: skewX(45deg);
+  border-bottom: 1px solid rgba(170, 170, 170, 0.35);
+  z-index: 99;
+}
+nav ul li a:hover::before {
+  height: 1rem;
+  bottom: -1rem;
+  left: 0.5rem;
+  background: #008d6b;
+}
+
+nav ul li a::after {
+  height: 100%;
+  background: #000;
+  top: 0.15rem;
+  right: -0.31rem;
+  width: 0.31rem;
+  transform: rotate(180deg) skew(0, 45deg);
+}
+nav ul li a:hover::after {
+  width: 1rem;
+  top: 0.51rem;
+  right: -1rem;
+  background: #008d6b;
+}
