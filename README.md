@@ -1,2 +1,2 @@
-# Only Css Isometri Menu
+# Only Css Isometric Menu
 Only css isometric menu
